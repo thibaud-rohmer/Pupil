@@ -68,7 +68,7 @@ class Episode
 			<td>$this->season</td>
 			<td>$this->number</td>
 			<td><a href=\"$this->url\">$this->fullname</a></td>
-			";		
+			";
 
 		$r .= "</tr>";
 

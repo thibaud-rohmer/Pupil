@@ -43,7 +43,7 @@ class Folder
 				$r .= "<div class='pure-u-1-3'></div><div class='pure-u-2-3'><a href=\"$e\">".htmlentities(basename($e))."</a></div>";
 				$r .= "</div>";
 			}else{
-				$r .= (string)$e;				
+				$r .= (string)$e;
 			}
 		}
 		

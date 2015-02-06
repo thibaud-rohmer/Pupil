@@ -76,7 +76,7 @@ class Parser
 				Parser::$shows[$ep->get_smart_name()]->add_ep($ep);
 			}
 			
-		}		
+		}
 	}
 	
 	public static function getShow($key){

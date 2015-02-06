@@ -22,13 +22,13 @@ if(isset($_GET['s'])){
 }else{
 
 }
-	
+
 usort(Parser::$shows, function($a, $b)
 {
     return $a->date < $b->date;
 });
 
-// List files		
+// List files
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ usort(Parser::$shows, function($a, $b)
 		<link rel="stylesheet" href="src/stylesheets/grids-responsive-min.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="src/stylesheets/pure-min.css" type="text/css" media="screen" title="no title" charset="utf-8">	
 		<link rel="stylesheet" href="src/stylesheets/layout.css" type="text/css" media="screen" title="no title" charset="utf-8">	
-                <link rel="stylesheet" href="src/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="src/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
 		<title><?php echo $conf["website-name"]; ?></title>
 </header>
@@ -47,7 +47,7 @@ usort(Parser::$shows, function($a, $b)
 <body id="index" onload="">
 	<div id='layout' class='content pure-g'>
 		<div id='nav' class='pure-u'>
-<a href="#" class="nav-menu-button">Menu</a>
+			<a href="#" class="nav-menu-button">Menu</a>
 			<div class='nav-inner'>
 				<div class='pure-menu pure-menu-open'>
 					<ul>
