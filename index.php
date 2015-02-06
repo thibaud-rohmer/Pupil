@@ -40,7 +40,7 @@ usort(Parser::$shows, function($a, $b)
 		<link rel="stylesheet" href="src/stylesheets/layout.css" type="text/css" media="screen" title="no title" charset="utf-8">	
                 <link rel="stylesheet" href="src/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<title>6-8.fr</title>
+		<title><?php echo $conf["website-name"]; ?></title>
 </header>
 
 
@@ -51,7 +51,7 @@ usort(Parser::$shows, function($a, $b)
 			<div class='nav-inner'>
 				<div class='pure-menu pure-menu-open'>
 					<ul>
-						<li class='pure-menu-heading'>6-8.fr</li>
+						<li class='pure-menu-heading'><?php echo $conf["website-name"]; ?></li>
 						<li><a href='?s=""'>Series</a></li>
 						<li><a href='?v=1'>Files</a></li>
 					<ul>
