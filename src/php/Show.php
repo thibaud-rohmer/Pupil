@@ -71,10 +71,9 @@ class Show
 	{
 		$eps = sizeof($this->episodes);
 
-usort($this->episodes, function($a, $b)
-{
-    return $a->date < $b->date;
-});
+		usort($this->episodes, function($a, $b){
+			return $a->date < $b->date;
+		});
 
 
 		
@@ -97,13 +96,13 @@ usort($this->episodes, function($a, $b)
 					<th>Full Name</th>
 				</tr>
 			</thead>
-			";			
+			";
 		foreach($this->episodes as $e){
 			$r .= (string)$e;
 		}
 		
 		$r.="</div>
-			
+		
 		</div>";
 		
 		return $r;
