@@ -22,13 +22,12 @@ if(isset($_GET['s'])){
 }else{
 
 }
-	
+
 usort(Parser::$shows, function($a, $b)
 {
     return $a->date < $b->date;
 });
 
-// List files		
 ?>
 
 <!DOCTYPE html>
@@ -76,11 +75,12 @@ usort(Parser::$shows, function($a, $b)
 		</div>
 		<div id='data' class='pure-u-1-1'>
 			<?php 
-			echo $show;
+			echo $show->toHTML();
 			?>
 		</div>
 	
 	</div>
 </body>
+
 
 

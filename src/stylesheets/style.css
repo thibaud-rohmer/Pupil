@@ -67,3 +67,11 @@ height: 34px;
 .listing-content-title {
 	text-transform: capitalize;
 }
+
+.listing-content-header {
+  background: center right no-repeat;
+  background-color: black;
+  color: white;
+  height: 100px;
+}
+

@@ -4,6 +4,7 @@ class Show
 {
 	private $name;
 	private $episodes;
+	private $banner;
 	public $date;
 	
 	public function __construct($episode)
@@ -67,19 +68,27 @@ class Show
 		return $a->date > $b->date;
 	}
 	
-	public function __toString()
+	public function toHTML()
 	{
 		$eps = sizeof($this->episodes);
+	if(strlen($this->name) > 1){
+		$f = file_get_contents("http://thetvdb.com/api/GetSeries.php?seriesname=".urlencode($this->name));
+		$doc = new SimpleXMLElement($f);
+		if(isset($doc->Series[0]->banner)){
+			$this->banner = $doc->Series[0]->banner;
+		}
+	}
 
-usort($this->episodes, function($a, $b)
-{
-    return $a->date < $b->date;
-});
+	usort($this->episodes, function($a, $b)
+	{
+	    return $a->date < $b->date;
+	});
 
 
 		
-		$r= "<div class='listing-content-header'>
-			<div class='pure-u-1-2'>
+		$r= "<div class='listing-content-header' ";
+		$r.="   style=\"background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,1) 60%), url('http://thetvdb.com/banners/$this->banner') no-repeat right;\">";
+		$r.="	<div class='pure-u-1-2'>
 			<h1 class='listing-content-title'>$this->name</h1>
 			<p class='listing-content-subtitle'>$eps Episodes, update: 12 Janvier 2015</p>
 			</div>

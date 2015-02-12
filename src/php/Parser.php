@@ -66,6 +66,7 @@ class Parser
 		$files = array_keys($files);
 
 		foreach($files as $file){
+
 			$f = new SplFileInfo($dir."/".$file);
 			if(! $ep = Parser::analyze($f) ){
 				continue;
